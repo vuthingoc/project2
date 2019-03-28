@@ -1,0 +1,148 @@
+
+.switch {
+  position: relative;
+  min-width: 90px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2ab934;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ca2222;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(55px);
+  -ms-transform: translateX(55px);
+  transform: translateX(55px);
+}
+
+/*------ ADDED CSS ---------*/
+.off
+{
+  display: none;
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 35%;
+  font-size: 12px;
+  font-weight:20px;
+  margin-right: 3px;
+}
+
+.on
+{
+  color: white;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  right: -19%;
+  font-size: 12px;
+  margin-right: 3px;
+}
+
+input:checked+ .slider .off
+{display: block;}
+
+input:checked + .slider .on
+{display: none;}
+
+/*--------- END --------*/
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 40px;
+}
+
+.slider.round:before {
+  border-radius: 50%;}
+
+
+#img_upload{
+    text-align: center;
+    padding: 15px;
+}
+
+#myImage{
+   max-width:100%;
+}
+
+@media only screen and (min-width:768px){
+.form-group {
+    margin-bottom: -0.5rem!important;
+}
+#content{
+	padding:40px 90px;
+}
+#search{
+	width:22%;
+}
+#switch_button{
+	margin-left:30%;;
+}
+
+}
+@media only screen and (min-width:416px) and (max-width:767px){
+#content{
+	padding:40px 50px;
+}
+.card-header {
+    padding: 0.5rem 1.15rem !important;
+}
+.form-group {
+    margin-bottom: 0rem!important;
+}
+#search{
+	width:90px;
+}
+#switch_button{
+	margin-left:15%;;
+}
+
+}
+@media only screen and (max-width:415px){
+.card-header {
+    padding: 0.2rem 1.15rem !important;
+}
+.form-group {
+    margin-bottom: 0rem!important;
+}
+#content{
+	padding:40px 10px;
+}
+#search{
+	width:60px;
+}
+#switch_button{
+	margin-left:2%
+}
+}
