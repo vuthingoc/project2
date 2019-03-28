@@ -10,4 +10,4 @@ function closeNav() {
 $("#btn").click(function () {
 	$("#form_add").toggle();
 });
-
+$('.open-overlay1').on('click', function(){});
