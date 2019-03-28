@@ -228,6 +228,7 @@ Burger king
 	  width: 34px;
 	  display: block;
 	  cursor: pointer;
+	  -webkit-overflow-scrolling: touch;
 	}
 
 	.open-overlay1 span {
